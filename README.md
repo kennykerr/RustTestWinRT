@@ -1,2 +1,3 @@
 # RustTestWinRT
-Test components for Rust/WinRT
+
+Test components to help in the bring up of Rust/WinRT.

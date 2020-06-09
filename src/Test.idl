@@ -1,0 +1,8 @@
+
+namespace Test
+{
+    runtimeclass Tests
+    {
+        static void Simple();
+    }
+}

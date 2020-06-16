@@ -10,16 +10,17 @@ jobs:
   build:
     runs-on: windows-latest
     steps:
-    - uses: actions/checkout@v2
+    - name: checkout
+      uses: actions/checkout@v2
 
-    - name: setup-msbuild
+    - name: setup msbuild
       uses: microsoft/setup-msbuild@v1
       
-    - name: Setup NuGet.exe for use with actions
+    - name: setup nuget
       uses: NuGet/setup-nuget@v1.0.2
 
-    - name: restore
+    - name: setup cppwinrt
       run: nuget restore src/test.sln
 
-    - name: build
+    - name: build project
       run: msbuild src/test.sln

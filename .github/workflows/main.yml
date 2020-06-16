@@ -12,5 +12,8 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: Run a one-line script
-      run: echo Hello, world!
+    - name: setup-msbuild
+      uses: microsoft/setup-msbuild@v1
+
+    - name: build
+      run: msbuild src/test.sln

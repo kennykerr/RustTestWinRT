@@ -6,3 +6,4 @@ Win32
 x64
 *.user
 *.winmd
+*.nupkg

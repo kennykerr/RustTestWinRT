@@ -23,7 +23,7 @@ jobs:
       run: nuget restore src/test.sln
 
     - name: setup nuget on github
-      run: nuget sources Add -Name "GPR" -Source ${{ secrets. GPR_URI }} -UserName ${{ GPR_USERNAME }} -Password ${{ secrets.GITHUB_TOKEN }}
+      run: nuget source Add -Name "GitHub" -Source "https://nuget.pkg.github.com/kennykerr/RustTestWinRT/index.json" -UserName kennykerr -Password ${{ secrets.GITHUB_TOKEN }}
 
     - name: build x86
       run: msbuild /m /p:Configuration=Release,Platform=x86 src/test.sln
@@ -35,4 +35,4 @@ jobs:
       run: nuget.exe pack src/Test.nuspec -OutputFileNamesWithoutVersion
 
     - name: nuget push
-      run: nuget push -source "GPR" *.nupkg
+      run: nuget push -source "GitHub" *.nupkg

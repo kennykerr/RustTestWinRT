@@ -22,5 +22,8 @@ jobs:
     - name: setup cppwinrt
       run: nuget restore src/test.sln
 
-    - name: build project
-      run: msbuild src/test.sln
+    - name: build x86
+      run: msbuild /m /p:Configuration=Release,Platform=x86 src/test.sln
+
+    - name: build x64
+      run: msbuild /m /p:Configuration=Release,Platform=x64 src/test.sln

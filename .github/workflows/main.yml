@@ -30,3 +30,6 @@ jobs:
 
     - name: nuget pack
       run: nuget.exe pack src/Test.nuspec -OutputFileNamesWithoutVersion
+
+    - name: nuget push
+      run: nuget push -source "GitHub" Microsoft.Windows.RustTestWinRT.nupkg

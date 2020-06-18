@@ -12,6 +12,7 @@
     <tags>native C++ WinRT nativepackage</tags>
     <copyright>© Microsoft Corporation. All rights reserved.</copyright>
     <projectUrl>https://github.com/kennykerr/RustTestWinRT</projectUrl>
+    <repository type="git" url="https://github.com/kennykerr/RustTestWinRT" />
     <dependencies>
       <group targetFramework="uap10.0" />
     </dependencies>

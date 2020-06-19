@@ -22,9 +22,6 @@ jobs:
     - name: setup cppwinrt
       run: nuget restore src/test.sln
 
-    - name: setup nuget on github
-      run: nuget source Add -Name "GitHub" -Source "https://nuget.pkg.github.com/kennykerr/index.json" -UserName kennykerr -Password ${{ secrets.GITHUB_TOKEN }}
-
     - name: build x86
       run: msbuild /m /p:Configuration=Release,Platform=x86 src/test.sln
 
@@ -35,4 +32,4 @@ jobs:
       run: nuget.exe pack src/Test.nuspec -OutputFileNamesWithoutVersion
 
     - name: nuget push
-      run: nuget push -source "GitHub" *.nupkg
+      run: nuget push KennyKerr.TestWinRT.nupkg oy2pbdhiuweczocu3c3ahkafi54bg7fe5le6phutzxo4de -Source nuget.org

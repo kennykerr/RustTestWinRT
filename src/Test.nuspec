@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
   <metadata minClientVersion="2.5">
     <id>KennyKerr.TestWinRT</id>
-    <version>1.0.5</version>
+    <version>1.0.6</version>
     <title>RustTestWinRT</title>
     <authors>Microsoft</authors>
     <owners>Microsoft</owners>
@@ -19,7 +19,7 @@
   </metadata>
   <files>
     <file src="Test.winmd" target="lib\uap10.0"/>
-    <file src="x86\Release\Test.dll" target="runtimes\win10-x86\native"/>
-    <file src="x64\Release\Test.dll" target="runtimes\win10-x64\native"/>
+    <file src="x86\Release\Test.dll" target="runtimes\win-x86\native"/>
+    <file src="x64\Release\Test.dll" target="runtimes\win-x64\native"/>
   </files>
 </package>

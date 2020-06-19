@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
   <metadata minClientVersion="2.5">
     <id>KennyKerr.TestWinRT</id>
-    <version>1.0.3</version>
+    <version>1.0.4</version>
     <title>RustTestWinRT</title>
     <authors>Microsoft</authors>
     <owners>Microsoft</owners>
